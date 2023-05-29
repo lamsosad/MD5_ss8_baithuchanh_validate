@@ -1,7 +1,7 @@
 package lam.ss8.controller;
 
 import lam.ss8.model.entity.Product;
-import lam.ss8.model.service.IProductService;
+import lam.ss8.model.service.product.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -19,7 +19,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class ProductController {
     @Autowired
     IProductService productService;
-    @GetMapping(value = {"/", "/product"})
+    @GetMapping( "/product")
     public ModelAndView listProduct(@PageableDefault(sort = "name",size = 3) Pageable pageable){
         Page<Product> productPage = productService.findAll(pageable);
         ModelAndView modelAndView = new ModelAndView("/product/list");

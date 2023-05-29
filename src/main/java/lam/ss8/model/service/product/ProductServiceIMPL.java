@@ -1,14 +1,15 @@
-package lam.ss8.model.service;
+package lam.ss8.model.service.product;
 
 import lam.ss8.model.entity.Product;
 import lam.ss8.model.repository.IProductRepository;
+import lam.ss8.model.service.product.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ProductServiceIMPL implements IProductService{
+public class ProductServiceIMPL implements IProductService {
     @Autowired
     IProductRepository productRepository;
     @Override

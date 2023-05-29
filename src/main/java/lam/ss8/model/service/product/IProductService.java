@@ -1,4 +1,4 @@
-package lam.ss8.model.service;
+package lam.ss8.model.service.product;
 
 import lam.ss8.model.entity.Product;
 import org.springframework.data.domain.Page;
